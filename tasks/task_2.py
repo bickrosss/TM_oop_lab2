@@ -1,36 +1,30 @@
 from octal_package.octal import Octal
 
 def main():
-    # 1. Демонстрация создания объектов
     print("1. Создание объектов Octal:")
     print()
     
-    # Из целого числа
     oct1 = Octal(42)
     print("Octal(42) = ", end="")
     oct1.display()
     
-    # Из строки
     oct2 = Octal("52")
     print("Octal('52') = ", end="")
     oct2.display()
     
-    # Из строки с префиксом
     oct3 = Octal("0o63")
     print("Octal('0o63') = ", end="")
     oct3.display()
     
-    # С указанием размера
     oct4 = Octal("777", size=5)
     print("Octal('777', size=5) = ", end="")
     oct4.display()
     print()
     
-    # 2. Демонстрация операции индексирования
     print("2. Операция индексирования []:")
     print()
     
-    test_oct = Octal("1234")  # 1234 в восьмеричной = 668 в десятичной
+    test_oct = Octal("1234")
     print("test_oct = Octal('1234')")
     print(f"test_oct[0] = {test_oct[0]} (единицы)")
     print(f"test_oct[1] = {test_oct[1]} (восьмерки)") 
@@ -38,7 +32,6 @@ def main():
     print(f"test_oct[3] = {test_oct[3]} (512-ки)")
     print()
     
-    # Изменение через индексирование
     print("Изменение через индексирование:")
     mod_oct = Octal("100")
     print(f"До: mod_oct = {mod_oct}")
@@ -46,7 +39,6 @@ def main():
     print(f"После mod_oct[0] = 5: mod_oct = {mod_oct}")
     print()
     
-    # 3. Демонстрация полей size и count
     print("3. Поля size и count:")
     print()
     
@@ -57,40 +49,34 @@ def main():
     print(f"  MAX_SIZE = {Octal.MAX_SIZE} (глобальная константа)")
     print()
     
-    # 4. Демонстрация арифметических операций
     print("4. Арифметические операции:")
     print()
     
-    a = Octal("12")  # 10 в десятичной
-    b = Octal("7")   # 7 в десятичной
+    a = Octal("12")
+    b = Octal("7")
     
     print(f"a = {a} (десятичное: {a.to_int()})")
     print(f"b = {b} (десятичное: {b.to_int()})")
     print()
     
-    # Сложение
     sum_result = a.add(b)
     print(f"a + b = {sum_result} (десятичное: {sum_result.to_int()})")
     
-    # Вычитание
     diff_result = a.subtract(b)
     print(f"a - b = {diff_result} (десятичное: {diff_result.to_int()})")
     
-    # Умножение
     mul_result = a.multiply(b)
     print(f"a * b = {mul_result} (десятичное: {mul_result.to_int()})")
     
-    # Деление
     div_result = a.divide(b)
     print(f"a / b = {div_result} (десятичное: {div_result.to_int()})")
     print()
     
-    # 5. Демонстрация операций сравнения
     print("5. Операции сравнения:")
     print()
     
-    x = Octal("15")  # 13 в десятичной
-    y = Octal("12")  # 10 в десятичной
+    x = Octal("15")
+    y = Octal("12") 
     
     print(f"x = {x} (десятичное: {x.to_int()})")
     print(f"y = {y} (десятичное: {y.to_int()})")
@@ -102,7 +88,6 @@ def main():
     print(f"x == x: {x.equals(x)}")
     print()
     
-    # 6. Демонстрация ввода с клавиатуры
     print("6. Ввод с клавиатуры:")
     print()
     
@@ -117,11 +102,10 @@ def main():
         print(f"Ошибка ввода: {e}")
     print()
     
-    # 7. Демонстрация преобразований
     print("7. Преобразования:")
     print()
     
-    demo_oct = Octal(255)  # 255 в десятичной = 377 в восьмеричной
+    demo_oct = Octal(255)
     print(f"Octal(255):")
     print(f"  to_string() = '{demo_oct.to_string()}'")
     print(f"  to_int() = {demo_oct.to_int()}")

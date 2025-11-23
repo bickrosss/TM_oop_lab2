@@ -66,7 +66,6 @@ class Pair:
         """Перегрузка float()"""
         return float(f"{self.first}.{self.second}")
 
-    # Старый метод multiply оставляем для обратной совместимости
     def multiply(self, number):
         return self.__mul__(number)
 

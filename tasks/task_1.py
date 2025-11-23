@@ -11,16 +11,16 @@ if __name__ == "__main__":
     pair2 = Pair(2, 44)
     pair3 = make_pair(7, 8)
     
-    print(f"pair1 = {pair1}")  # использует __str__
+    print(f"pair1 = {pair1}")
     print(f"pair2 = {pair2}")
     print(f"pair3 = {pair3}")
-    print(f"repr(pair1) = {repr(pair1)}")  # использует __repr__
+    print(f"repr(pair1) = {repr(pair1)}")
     
     print("\n2. Перегрузка оператора умножения *:")
-    result1 = pair1 * 3  # использует __mul__
+    result1 = pair1 * 3 
     print(f"{pair1} * 3 = {result1}")
     
-    result2 = 2 * pair2  # использует __rmul__
+    result2 = 2 * pair2 
     print(f"2 * {pair2} = {result2}")
     
     result3 = pair3 * 0

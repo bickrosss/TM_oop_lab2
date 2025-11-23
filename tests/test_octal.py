@@ -22,7 +22,6 @@ def test_octal_arithmetic():
     sum_result = a.add(b)
     assert sum_result.to_int() == 17
     
-    # Используем существующие методы сравнения
     diff_result = a.subtract(b)
     assert diff_result.to_int() == 3
 
