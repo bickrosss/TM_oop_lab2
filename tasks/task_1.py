@@ -6,7 +6,7 @@ from pair import make_pair
 
 
 if __name__ == "__main__":
-     print("1. Создание объектов:")
+    print("1. Создание объектов:")
     pair1 = Pair(3, 5)
     pair2 = Pair(2, 44)
     pair3 = make_pair(7, 8)
@@ -76,5 +76,5 @@ if __name__ == "__main__":
     for pair in test_pairs:
         for mult in multipliers:
             result = pair * mult
-            print(f"{pair:>6} * {mult:>2} = {result}")
+            print(f"{str(pair):>6} * {mult:>2} = {result}")
         print()
