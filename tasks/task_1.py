@@ -6,9 +6,7 @@ from pair import make_pair
 
 
 if __name__ == "__main__":
-    print("=== Демонстрация класса Pair с перегрузкой операторов ===")
-    
-    print("1. Создание объектов:")
+     print("1. Создание объектов:")
     pair1 = Pair(3, 5)
     pair2 = Pair(2, 44)
     pair3 = make_pair(7, 8)
@@ -80,5 +78,3 @@ if __name__ == "__main__":
             result = pair * mult
             print(f"{pair:>6} * {mult:>2} = {result}")
         print()
-    
-    print("=== Завершение демонстрации ===")

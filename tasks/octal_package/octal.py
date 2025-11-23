@@ -93,7 +93,21 @@ class Octal:
         result_int = self.to_int() + other.to_int()
         result_size = max(self.size, other.size)
         return Octal(result_int, result_size)
-    
+    # Операторы сравнения (добавить после методов equals, greater, less)
+    def __eq__(self, other):
+        return self.equals(other)
+
+    def __lt__(self, other):
+        return self.less(other)
+
+    def __gt__(self, other):
+        return self.greater(other)
+
+    def __le__(self, other):
+        return self.less(other) or self.equals(other)
+
+    def __ge__(self, other):
+        return self.greater(other) or self.equals(other)
     def subtract(self, other):
         """Вычитание"""
         if self < other:

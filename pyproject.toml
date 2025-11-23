@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tm-oop-lab1"
+name = "tm-oop-lab2"
 version = "1.0.0"
 description = "Лабораторная работа по ООП"
 authors = [
@@ -19,7 +19,6 @@ dev = [
     "black>=23.0.0",
     "isort>=5.12.0",
     "flake8>=6.0.0",
-    "pre-commit>=3.0.0",
 ]
 
 [tool.pytest.ini_options]
@@ -30,9 +29,10 @@ python_functions = "test_*"
 addopts = [
     "--verbose",
     "--color=yes",
-    "--rootdir=.",
+    "--strict-markers",
+    "--strict-config",
 ]
-pythonpath = ["tasks", "."]  # ✅ ДОБАВЛЕНО "tasks"
+pythonpath = ["tasks", "."]
 
 [tool.black]
 line-length = 88
@@ -51,6 +51,7 @@ extend-exclude = '''
 [tool.isort]
 profile = "black"
 line_length = 88
+known_first_party = ["octal_package"]
 
 [tool.flake8]
 max-line-length = 88

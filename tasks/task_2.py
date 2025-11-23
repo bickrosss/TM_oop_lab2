@@ -1,9 +1,6 @@
-from octal import Octal
+from octal_package.octal import Octal
 
 def main():
-    print("=== Задание 3: Класс Octal для работы с восьмеричными числами ===")
-    print()
-    
     # 1. Демонстрация создания объектов
     print("1. Создание объектов Octal:")
     print()
@@ -130,33 +127,6 @@ def main():
     print(f"  to_int() = {demo_oct.to_int()}")
     print(f"  str(octal) = '{str(demo_oct)}'")
     print()
-    
-    # 8. Демонстрация обработки ошибок
-    print("8. Обработка ошибок:")
-    print()
-    
-    try:
-        # Попытка создать Octal с невосьмеричными цифрами
-        bad_oct = Octal("89")
-    except ValueError as e:
-        print(f"Octal('89') -> ValueError: {e}")
-    
-    try:
-        # Попытка выйти за границы индекса
-        test = Octal("123")
-        value = test[10]
-    except IndexError as e:
-        print(f"test[10] -> IndexError: {e}")
-    
-    try:
-        # Попытка присвоить невосьмеричную цифру
-        test = Octal("123")
-        test[0] = 8
-    except ValueError as e:
-        print(f"test[0] = 8 -> ValueError: {e}")
-    print()
-    
-    print("=== Демонстрация завершена ===")
 
 if __name__ == "__main__":
     main()
